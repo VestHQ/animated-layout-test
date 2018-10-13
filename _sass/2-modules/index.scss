@@ -1,0 +1,71 @@
+.main {
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  font-family: "Avenir Next", Chivo, sans-serif;
+
+  @include respond(xl-phone){
+    flex-direction: column;
+  }
+
+  .header-section {
+    width: 33.33333%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem;
+
+    .header {
+      color: $dark-blue;
+      font-size: 6rem;
+
+      &__secondary {
+        font-size: 1.8rem;
+        color: $cold-blue;
+        margin-bottom: 3rem;
+      }
+    }
+
+    @include respond(xl-phone){
+      width: 50%;
+      min-height: 40rem;
+      align-self: center;
+      margin: 5rem auto;
+    }
+  }
+  .right-header {
+    width: 66.66666%;
+    background-color: $mid-blue;
+    display: flex;
+    justify-content: space-evenly;
+
+    .phone {
+      width: 20rem;
+      height: 40rem;
+      border-radius: 1rem;
+      background-color: #fff;
+      margin: 1rem;
+
+      &:first-child {
+        align-self: center;
+      }
+
+      @include respond(xl-phone){
+        width: 15rem;
+        height: 23rem;
+      }
+    }
+    @include respond(xl-phone){
+      width: 100%;
+    }
+  }
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.row {
+  display: flex;
+}
