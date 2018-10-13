@@ -1,8 +1,9 @@
-.main {
+.index {
   height: 100%;
   display: flex;
   font-family: "Avenir Next", Chivo, sans-serif;
   position: relative;
+  overflow-x: hidden;
 
   @include respond(xl-phone){
     flex-direction: column;
@@ -15,25 +16,6 @@
     flex-direction: column;
     justify-content: center;
     margin: 2rem;
-
-
-    .header {
-      color: $dark-blue;
-      font-size: 6rem;
-
-      @include respond(l-screen) {
-        position: absolute;
-        margin-left: 2rem;
-        top: 28%; left: 0;
-        z-index: 1;
-        width: 100%;
-      }
-      &__secondary {
-        font-size: 1.8rem;
-        color: $cold-blue;
-        margin-bottom: 3rem;
-      }
-    }
 
     @include respond(xl-phone){
       width: 66.666%;
@@ -48,23 +30,6 @@
     display: flex;
     justify-content: space-evenly;
 
-    .phone {
-      width: 22rem;
-      height: 40rem;
-      border-radius: 2rem;
-      background-color: #fff;
-      margin: 1rem;
-      box-shadow: 0 2rem 5rem rgba(#000, .1);
-
-      &:first-child {
-        align-self: center;
-      }
-
-      @include respond(xl-phone){
-        width: 17rem;
-        height: 35rem;
-      }
-    }
     @include respond(xl-phone){
       width: 100%;
     }
@@ -73,8 +38,76 @@
 .col {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+
+  &--1{
+    width: 50%;
+    align-self: center;
+    margin-bottom: 2.4rem;
+  }
 }
+.icon {
+  width: 3rem;
+  height: 3rem;
+  background-color: $light2-blue;
+  border: 1px solid $mid-blue;
+  border-radius: 5rem;
+}
+
 .row {
   display: flex;
+  justify-content: space-evenly;
+}
+.phone {
+  width: 22rem;
+  height: 40rem;
+  border-radius: 2rem;
+  background-color: #fff;
+  margin: 1rem;
+  box-shadow: 0 2rem 5rem rgba(#000, .1);
+
+  &:first-child {
+    align-self: center;
+  }
+
+  @include respond(xl-phone){
+    width: 17rem;
+    height: 35rem;
+  }
+}
+
+
+.numbers {
+  font-family: "Avenir Next", Chivo, sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+  height: 35rem;
+
+  &__number {
+    align-self: center;
+    color: $dark-blue;
+    font-size: 6.5rem;
+  }
+  &__text {
+    color: $cold-blue;
+    font-size: 2.1rem;
+    font-weight: 500;
+  }
+}
+
+.offer {
+  font-family: "Avenir Next", Chivo, sans-serif;
+  height: 100%;
+  padding: 3rem;
+  background-color: $mid-blue;
+  margin: 2rem auto;
+  text-align: center;
+}
+.paragraphs {
+  font-family: "Avenir Next", Chivo, sans-serif;
+  height: 100%;
+  padding: 3rem;
+
+  display: flex;
+  justify-content: space-around;
 }
